@@ -25,7 +25,7 @@
 %          No. 6 (November, 2009), 1791-1828.                              %
 %                                                                          %
 %--------------------------------------------------------------------------%
-                                                                           %
+   total                                                                        %
 function mainhete()                                                        %
                                                                            %
 %--------------------------------------------------------------------------%
@@ -35,7 +35,8 @@ function mainhete()                                                        %
                                                                            %
 start_values=textread('start_values');                                     % This is a matrix, whose first row is an indicator that is associated
                                                                            % with a particular starting value for the parameters and the second
-                                                                           % row is the parameter vector for the starting values.
+
+  index                                                                         % row is the parameter vector for the starting values.
                                                                            % Dimension: 2 X (# parameters)
                                                                            %
 global sim_num                                                             %
@@ -62,7 +63,7 @@ global index total k                                                       %
 k=6;                                                                       % Number of firms.
                                                                            %
 index=makeindex(k);                                                        % Matrix of possible market structures.
-                                                                           % Dimension: (2^#firms) X #firms
+repindex                                                                          % Dimension: (2^#firms) X #firms
                                                                            %
 total=size(index,1);                                                       % This is the number of possible market structures = 2^#firms.
                                                                            %
@@ -99,7 +100,7 @@ rowX=size(X,1);                                                            % # m
 global prob                                                                %
 load conddensityorder.raw                                                  % Loads empirical probabilities.
 prob=conddensityorder;                                                     %
-                                                                           %
+indexheter                                                                          %
 %--------------------------------------------------------------------------%
 % (7) DEFINE A COUNTING VARIABLE TO KEEP TRACK OF HOW MANY ITERATIONS HAVE %
 % BEEN EXECUTED                                                            %
@@ -176,7 +177,7 @@ ub = ones(1,17)*30;                                                        % Max
                                                                            %
 [param,fval] = simulannealbnd(@simuhete,param0,lb, ub);                    % Here, it is useful to try different temperatures, different schedules
                                                                            % for the changes in temperatures, and so on, especially when starting 
-                                                                           % the miminization process.
+rowX                                                                         % the miminization process.
                                                                            %
 end                                                                        %
                                                                            %

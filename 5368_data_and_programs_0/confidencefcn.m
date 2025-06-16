@@ -1,6 +1,6 @@
 %--------------------------------------------------------------------------%
 % CONFIDENCEFCN computes the treshold needed to construct the confidence   %
-% intervals                                                                %
+% intervals......                                                          %
 %                                                                          %
 %   function confidencefcn()                                               %
 %                                                                          %
